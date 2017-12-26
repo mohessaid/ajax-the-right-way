@@ -1,10 +1,11 @@
 (function($) {
     $(document).ready(function() {
-        $(document).on('submit', 'my-form-id', function(e) {
-            console.log("heloo")
+        console.log("hello");
+        $(document).on('submit', 'info_form', function(event) {
+            event.preventDefault();
             // Add this line.
-            e.preventDefault();
-
+            
+            console.log("hello two");
             var product_id = $("#product_id").val();
             var user_id = $("#user_id").val();
             var comment = $("#comment_input").val();
@@ -23,7 +24,7 @@
             else {
                 $.ajax({
                     type: "POST",
-                    url: "api.php",
+                    url: "./api.php",
                     data: data,
                     cache: false,
                     success: function(html) {
