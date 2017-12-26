@@ -1,11 +1,10 @@
 (function($) {
     $(document).ready(function() {
-        console.log("hello");
-        $(document).on('submit', 'info_form', function(event) {
+
+        $(document).on('submit', '#info_form', function(event) {
             event.preventDefault();
             // Add this line.
             
-            console.log("hello two");
             var product_id = $("#product_id").val();
             var user_id = $("#user_id").val();
             var comment = $("#comment_input").val();
